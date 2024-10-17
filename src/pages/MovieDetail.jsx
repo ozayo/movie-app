@@ -7,6 +7,7 @@ import { fetchMovieDetail } from '../redux/slices/movieDetailSlice';
 import { toggleFavorite } from '../redux/slices/favoritesSlice'; // Favori ekleme/çıkarma aksiyonlarını import ediyoruz
 import MovieCast from '../components/MovieCast'; // Oyuncu listesi
 import { FaStar, FaRegClock, FaRegCalendarCheck, FaHeart } from "react-icons/fa";
+import ReactGA from 'react-ga4';
 
 const MovieDetail = () => {
   const { id } = useParams(); // useParams ile film ID'sini alıyoruz
@@ -34,6 +35,11 @@ const MovieDetail = () => {
   // Favori ekleme/çıkarma işlemi
   const handleFavoriteToggle = () => {
     dispatch(toggleFavorite(movie)); // Filmi favorilere ekleme veya çıkarma işlemi
+    ReactGA.event({ // Google analytics button event follow
+      category: 'Button',
+      action: 'Clicked on movie detail page',
+      label: 'Add remove fav button'
+    });
   };
 
   return (
