@@ -93,9 +93,9 @@ const MovieDetail = () => {
       <div className="mt-8">
         <button
           onClick={() => navigate(-1)} // Bir önceki sayfaya dönmek için
-          className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+          className="bg-black text-white px-5 py-3 rounded-md hover:bg-blue-600"
         >
-          Back
+          Turn back
         </button>
       </div>
     </div>
