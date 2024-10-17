@@ -48,9 +48,9 @@ npm install
 ```
 
 5. After the installation is complete, start the application with the command:
-   ```bash
-   npm run dev
-   ```
+```bash
+npm run dev
+```
 
 6. The application can be accessed through your localhost, go to http://localhost:5173 to view the app.
 
@@ -62,9 +62,9 @@ To run the app locally, follow these steps:
 
 - Clone the repository:
 
-   ```bash
-   git clone https://github.com/ozayo/movie-app.git
-   ```
+```bash
+git clone https://github.com/ozayo/movie-app.git
+```
 
 - Navigate to the project folder:
 ```bash 
@@ -83,7 +83,7 @@ npm run dev
 
 - Open your browser and go to http://localhost:5173 to view the app.
 
-### Running
+## Running
 
 #### Create a .env file
 
