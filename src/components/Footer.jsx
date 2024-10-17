@@ -66,8 +66,8 @@ const Footer = () => {
 
       {/* Footer Text */}
       <div className="text-gray-500 text-xs my-2 font-light">
-        <p>Chas SEO</p>
-        <p>2024 - Özay - Chas Academy</p>
+        <p>Movie App</p>
+        <p>2024 - Özay Özdemir - Chas Academy</p>
       </div>
     </footer>
   );
