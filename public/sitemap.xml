@@ -1,32 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://your-website.com/</loc>
+    <loc>https://movie-app-sage-six.vercel.app/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-website.com/movies</loc>
+    <loc>https://movie-app-sage-six.vercel.app/movies</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-website.com/movies/top-rated</loc>
+    <loc>https://movie-app-sage-six.vercel.app/movies/top-rated</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-website.com/movies/upcoming</loc>
+    <loc>https://movie-app-sage-six.vercel.app/favorites</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://your-website.com/favorites</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://your-website.com/movies/:id</loc>
+    <loc>https://movie-app-sage-six.vercel.app/movies/:id</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

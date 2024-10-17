@@ -4,7 +4,7 @@ import { writeFileSync } from 'fs';
 import path from 'path';
 import routes from './src/routes.js'; // Route'ları import ediyoruz
 
-const hostname = 'https://your-website.com'; // Projenizin canlı URL'sini buraya yazın
+const hostname = 'https://movie-app-sage-six.vercel.app'; // Projenizin canlı URL'sini buraya yazın
 
 const generateSitemap = () => {
   let sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n`;

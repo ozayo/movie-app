@@ -14,7 +14,7 @@ const generateRobotsTxt = () => {
     content = `User-agent: *\nDisallow: /`;
   } else if (env === 'production') {
     // Allow all pages in production environment
-    content = `User-agent: *\nAllow: /\n\nSitemap: https://your-website.com/sitemap.xml`;
+    content = `User-agent: *\nAllow: /\n\nSitemap: https://movie-app-sage-six.vercel.app/sitemap.xml`;
   }
 
   // Write the content to robots.txt in public folder
