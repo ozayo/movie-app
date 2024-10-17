@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "generate-sitemap": "node generate-sitemap",
+    "generate-robots-dev": "NODE_ENV=development node generate-robots.js",
+    "generate-robots-prod": "NODE_ENV=production node generate-robots.js"
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.3.0",
