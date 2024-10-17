@@ -18,9 +18,9 @@ const Header = () => {
         <Link to="/" aria-label="Home">
           <img
             src={ozayLogo}
-            height={36}
-            width={260}
-            alt="My Movies"
+            height={32}
+            width={230}
+            alt="Movie App"
           />
         </Link>
 
@@ -38,8 +38,8 @@ const Header = () => {
           <Link to="/movies/upcoming" className="text-black hover:text-gray-700">
             Upcoming Movies
           </Link>
-          <Link to="/tvshows" className="text-black hover:text-gray-700">
-            TV Shows
+          <Link to="/favorites" className="text-black hover:text-gray-700">
+            My Favories
           </Link>
         </nav>
 
