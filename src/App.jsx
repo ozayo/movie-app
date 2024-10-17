@@ -11,6 +11,7 @@ import { store } from './redux/store';  // Store'u import ediyoruz
 import Footer from './components/Footer';
 import Header from './components/Header';
 import MovieDetail from './pages/MovieDetail'; // MovieDetail bileşenini ekliyoruz
+import FavoriteMovies from './pages/FavoriteMovies'; // Favori filmler sayfasını ekliyoruz
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
               <Route path="/movies/upcoming" element={<UpcomingMovies />} />
               <Route path="/tvshows/*" element={<TVShows />} />
               <Route path="/movies/:id" element={<MovieDetail />} /> {/* Detay sayfası */}
+              <Route path="/favorites" element={<FavoriteMovies />} /> {/* Favori Filmler sayfası */}
             </Routes>
           </main>
           <Footer />
