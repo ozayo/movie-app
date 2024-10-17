@@ -1,14 +1,24 @@
 // src/components/Header.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { FaBars, FaTimes } from 'react-icons/fa'; // React Icons for menu
-import ozayLogo from "../assets/oo-logo.svg"
+import { FaBars, FaTimes, FaSearch } from 'react-icons/fa';
+import ozayLogo from "../assets/oo-logo.svg";
+import Search from './Search'; // Arama bileşenini import ediyoruz
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showSearch, setShowSearch] = useState(false);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+  };
+
+  const toggleSearch = () => {
+    setShowSearch(!showSearch);
+  };
+
+  const closeSearch = () => {
+    setShowSearch(false); // Arama kutusunu kapatma fonksiyonu
   };
 
   return (
@@ -25,7 +35,7 @@ const Header = () => {
         </Link>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex space-x-4" aria-label="Main">
+        <nav className="hidden md:flex space-x-4 items-center" aria-label="Main">
           <Link to="/" className="text-black hover:text-gray-700">
             Home
           </Link>
@@ -35,25 +45,36 @@ const Header = () => {
           <Link to="/movies/top-rated" className="text-black hover:text-gray-700">
             Top Rated Movies
           </Link>
-          <Link to="/movies/upcoming" className="text-black hover:text-gray-700">
-            Upcoming Movies
-          </Link>
           <Link to="/favorites" className="text-black hover:text-gray-700">
-            My Favories
+            My Favorites
           </Link>
         </nav>
 
-        {/* Hamburger Menu (Mobile) */}
-        <button
-          onClick={toggleMenu}
-          className="md:hidden text-gray-900 focus:outline-none"
-          aria-label="Toggle menu"
-          aria-controls="mobile-menu"
-          aria-expanded={isOpen ? "true" : "false"}
-        >
-          {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
+        {/* Search Icon */}
+        <div className="flex items-center space-x-4">
+          <button onClick={toggleSearch} aria-label="Search" className="text-gray-900">
+            <FaSearch size={20} />
+          </button>
+
+          {/* Hamburger Menu (Mobile) */}
+          <button
+            onClick={toggleMenu}
+            className="md:hidden text-gray-900 focus:outline-none"
+            aria-label="Toggle menu"
+            aria-controls="mobile-menu"
+            aria-expanded={isOpen ? "true" : "false"}
+          >
+            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+          </button>
+        </div>
       </div>
+
+      {/* Search Input (Gizli başlar, ikona tıklanınca gösterilir) */}
+      {showSearch && (
+        <div className="bg-white px-4 sm:px-6 lg:px-8 py-4 border-t border-gray-200">
+          <Search closeSearch={closeSearch} />
+        </div>
+      )}
 
       {/* Mobile Menu */}
       {isOpen && (
@@ -71,11 +92,8 @@ const Header = () => {
           <Link to="/movies/top-rated" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
             Top Rated Movies
           </Link>
-          <Link to="/movies/upcoming" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
-            Upcoming Movies
-          </Link>
-          <Link to="/tvshows" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
-            TV Shows
+          <Link to="/favorites" className="block text-gray-700 hover:bg-gray-100 px-3 py-2 rounded-md">
+            My Favorites
           </Link>
         </nav>
       )}
