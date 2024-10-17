@@ -1,6 +1,7 @@
 // src/pages/FavoriteMovies.jsx
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
+import { Helmet } from 'react-helmet-async'; 
 import MovieList from '../components/MovieList';
 
 const FavoriteMovies = () => {
@@ -26,6 +27,10 @@ const FavoriteMovies = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <Helmet>
+        <title>Movie App - My Favorite Movies</title>
+      </Helmet>
+
       <h1 className="text-3xl font-bold mb-4">My Favorite Movies</h1>
       {favoriteMovies.length > 0 ? (
         <MovieList movies={favoriteMovies} />

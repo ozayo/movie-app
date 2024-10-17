@@ -1,6 +1,7 @@
 // src/pages/MovieDetail.jsx
 import React, { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMovieDetail } from '../redux/slices/movieDetailSlice';
 import { toggleFavorite } from '../redux/slices/favoritesSlice'; // Favori ekleme/çıkarma aksiyonlarını import ediyoruz
@@ -37,6 +38,14 @@ const MovieDetail = () => {
 
   return (
     <div className="container mx-auto p-4">
+      <Helmet>
+        <title>{movie.title} - Movie App</title>
+        <meta name="description" content={`Details about the movie ${movie.title}.`} />
+        <meta property="og:title" content={movie.title} />
+        <meta property="og:description" content={movie.overview} />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
+      </Helmet>
       {movie ? (
         <div className="flex flex-col md:flex-row items-start">
           <img
