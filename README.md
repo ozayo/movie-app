@@ -1,5 +1,7 @@
 # Movie App
 
+<img src="public/movie-app.png" alt="Logo" width="1000" />
+
 This is a movie listing web application built with React, Redux Toolkit, and The Movie Database (TMDb) API. It allows users to browse popular, top-rated, and upcoming movies, as well as view details for each movie and manage a personal list of favorite movies.
 
 ## Live Demo
