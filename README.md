@@ -55,34 +55,6 @@ npm run dev
 6. The application can be accessed through your localhost, go to http://localhost:5173 to view the app.
 
 
-
-## Installation
-
-To run the app locally, follow these steps:
-
-- Clone the repository:
-
-```bash
-git clone https://github.com/ozayo/movie-app.git
-```
-
-- Navigate to the project folder:
-```bash 
-cd movie-App
-```
-- Create a .env file in the project root and add your TMDb API key:
-```bash  
-VITE_API_KEY=your_tmdb_api_key_here 
-```
-
-- Start the development server:
-
-```bash 
-npm run dev
-```
-
-- Open your browser and go to http://localhost:5173 to view the app.
-
 ## Running
 
 #### Create a .env file
